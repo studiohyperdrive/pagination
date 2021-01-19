@@ -1,0 +1,17 @@
+lib/
+node_modules/
+coverage/
+
+.commitlintrc.json
+.editorconfig
+.eslintignore
+.eslintrc.json
+.gitignore
+.huskyrc.json
+.nvmrc
+.yarnrc
+.yarnrc
+jest.config.js
+rollup.config.js
+tsconfig.json
+tslint.json

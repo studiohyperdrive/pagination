@@ -1,0 +1,44 @@
+{
+	"compilerOptions": {
+		"baseUrl": ".",
+		"module": "es6",
+		"moduleResolution": "node",
+		"outDir": "dist",
+		"rootDir": ".",
+		"target": "es2015",
+		"watch": false,
+		"allowSyntheticDefaultImports": true,
+		"emitDecoratorMetadata": true,
+		"esModuleInterop": true,
+		"experimentalDecorators": true,
+		"noImplicitAny": true,
+		"resolveJsonModule": true,
+		"sourceMap": true,
+		"strictBindCallApply": true,
+		"strictFunctionTypes": true,
+		"strictNullChecks": false,
+		"lib": [
+			"dom",
+			"es2015",
+			"es2020.string"
+		],
+		"declaration": true,
+		"declarationDir": "./dist",
+		"skipLibCheck": true,
+		"typeRoots": [
+			"node_modules/@types"
+		],
+		"types": [
+			"node"
+		]
+	},
+	"ts-node": {
+		"compilerOptions": {
+			"module": "commonjs"
+		}
+	},
+	"exclude": [
+		"dist",
+		"node_modules"
+	]
+}
