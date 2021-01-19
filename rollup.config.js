@@ -20,7 +20,10 @@ export default {
 			file: pkg.browser,
 			format: 'umd',
 			name: 'SHD Pagination',
-			globals: {},
+			globals: {
+				'lodash.omit': 'omit',
+				qs: 'qs',
+			},
 		},
 	],
 	external: [

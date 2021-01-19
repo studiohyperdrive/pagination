@@ -11,6 +11,7 @@ module.exports = {
 	collectCoverage: true,
 	collectCoverageFrom: [
 		'<rootDir>/lib/**/*.ts',
+		'!<rootDir>/lib/**/index.ts',
 	],
 	coverageDirectory: './coverage',
 	coverageReporters: [
