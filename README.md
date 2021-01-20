@@ -45,7 +45,7 @@ class ItemController {
 }
 ```
 
-This will transform your entities and count to a HAL formatted response which you can return to the client.
+This will transform your items and total to a formatted pagination response which you can return to the client. Adding a `path` and `query` is optional. If specified, links to the current, first, last, next and previous page are added to the response.
 
 ### What's in the package?
 This package exposes the following functions:
