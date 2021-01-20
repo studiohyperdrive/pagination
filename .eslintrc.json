@@ -5,7 +5,7 @@
 		"sourceType": "module"
 	},
 	"extends": [
-		"airbnb-typescript/base",
+		// "airbnb-typescript/base",
 		"plugin:@typescript-eslint/eslint-recommended",
 		"plugin:@typescript-eslint/recommended",
 		"plugin:eslint-comments/recommended",
@@ -69,6 +69,8 @@
 				["parent", "sibling", "index"]
 			],
 			"newlines-between": "always"
-		}]
+		}],
+		// Jest
+		"jest/no-done-callback": 0
 	}
 }
