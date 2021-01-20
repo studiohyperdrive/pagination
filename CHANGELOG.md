@@ -1,11 +1,14 @@
 # CHANGELOG
 
-## 0.0.0
+## 1.0.0
 
-Placeholder
+Initial release of `@studiohyperdrive/pagination`.
 
 *Features:*
-/
+- Added `calculateTotalPages`
+- Added `formatQuerystring`
+- Added `formatLink`
+- Added `Pagination`
 
 *Bugfixes:*
 /
