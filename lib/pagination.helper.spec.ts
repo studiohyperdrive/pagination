@@ -37,16 +37,20 @@ describe('Pagination', () => {
 			},
 		});
 		expect(paginated).toEqual({
-			items,
-			total: 100,
-			pages: 10,
-			page: 5,
-			size: 10,
-			self: '/api/items?key=value&page=5&size=10',
-			first: '/api/items?key=value&page=1&size=10',
-			last: '/api/items?key=value&page=10&size=10',
-			next: '/api/items?key=value&page=6&size=10',
-			prev: '/api/items?key=value&page=4&size=10',
+			_embedded: {
+				items,
+				total: 100,
+				pages: 10,
+				page: 5,
+				size: 10,
+			},
+			_links: {
+				self: '/api/items?key=value&page=5&size=10',
+				first: '/api/items?key=value&page=1&size=10',
+				last: '/api/items?key=value&page=10&size=10',
+				next: '/api/items?key=value&page=6&size=10',
+				prev: '/api/items?key=value&page=4&size=10',
+			},
 		});
 		done();
 	});
@@ -65,15 +69,19 @@ describe('Pagination', () => {
 			},
 		});
 		expect(paginated).toEqual({
-			items,
-			total: 100,
-			pages: 10,
-			page: 10,
-			size: 10,
-			self: '/api/items?key=value&page=10&size=10',
-			first: '/api/items?key=value&page=1&size=10',
-			last: '/api/items?key=value&page=10&size=10',
-			prev: '/api/items?key=value&page=9&size=10',
+			_embedded: {
+				items,
+				total: 100,
+				pages: 10,
+				page: 10,
+				size: 10,
+			},
+			_links: {
+				self: '/api/items?key=value&page=10&size=10',
+				first: '/api/items?key=value&page=1&size=10',
+				last: '/api/items?key=value&page=10&size=10',
+				prev: '/api/items?key=value&page=9&size=10',
+			},
 		});
 		done();
 	});
@@ -92,15 +100,19 @@ describe('Pagination', () => {
 			},
 		});
 		expect(paginated).toEqual({
-			items,
-			total: 100,
-			pages: 10,
-			page: 1,
-			size: 10,
-			self: '/api/items?key=value&page=1&size=10',
-			first: '/api/items?key=value&page=1&size=10',
-			last: '/api/items?key=value&page=10&size=10',
-			next: '/api/items?key=value&page=2&size=10',
+			_embedded: {
+				items,
+				total: 100,
+				pages: 10,
+				page: 1,
+				size: 10,
+			},
+			_links: {
+				self: '/api/items?key=value&page=1&size=10',
+				first: '/api/items?key=value&page=1&size=10',
+				last: '/api/items?key=value&page=10&size=10',
+				next: '/api/items?key=value&page=2&size=10',
+			},
 		});
 		done();
 	});
@@ -113,11 +125,13 @@ describe('Pagination', () => {
 			total: 100,
 		});
 		expect(paginated).toEqual({
-			items,
-			total: 100,
-			pages: 10,
-			page: 5,
-			size: 10,
+			_embedded: {
+				items,
+				total: 100,
+				pages: 10,
+				page: 5,
+				size: 10,
+			},
 		});
 		done();
 	});
@@ -131,16 +145,20 @@ describe('Pagination', () => {
 			path: '/api/items',
 		});
 		expect(paginated).toEqual({
-			items,
-			total: 100,
-			pages: 10,
-			page: 5,
-			size: 10,
-			self: '/api/items?page=5&size=10',
-			first: '/api/items?page=1&size=10',
-			last: '/api/items?page=10&size=10',
-			next: '/api/items?page=6&size=10',
-			prev: '/api/items?page=4&size=10',
+			_embedded: {
+				items,
+				total: 100,
+				pages: 10,
+				page: 5,
+				size: 10,
+			},
+			_links: {
+				self: '/api/items?page=5&size=10',
+				first: '/api/items?page=1&size=10',
+				last: '/api/items?page=10&size=10',
+				next: '/api/items?page=6&size=10',
+				prev: '/api/items?page=4&size=10',
+			},
 		});
 		done();
 	});

@@ -64,21 +64,25 @@ export function Pagination<T = unknown>({
 	const pages: number = calculateTotalPages(total, size);
 
 	return {
-		items,
-		total,
-		pages,
-		page,
-		size,
-		...path && {
-			self: formatLink(path, page, size, query),
-			first: formatLink(path, 1, size, query),
-			last: formatLink(path, pages, size, query),
-			...(page + 1 <= pages) && {
-				next: formatLink(path, page + 1, size, query),
+	  _embedded: {
+			items,
+			total,
+			pages,
+			page,
+			size,
+	  },
+	  ...path && {
+			_links: {
+		  self: formatLink(path, page, size, query),
+		  first: formatLink(path, 1, size, query),
+		  last: formatLink(path, pages, size, query),
+		  ...(page + 1 <= pages) && {
+					next: formatLink(path, page + 1, size, query),
+		  },
+		  ...(page - 1 > 0) && {
+					prev: formatLink(path, page - 1, size, query),
+		  },
 			},
-			...(page - 1 > 0) && {
-				prev: formatLink(path, page - 1, size, query),
-			},
-		},
+	  },
 	};
 }

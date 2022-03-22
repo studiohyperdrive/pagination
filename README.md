@@ -47,6 +47,45 @@ class ItemController {
 
 This will transform your items and total to a formatted pagination response which you can return to the client. Adding a `path` and `query` is optional. If specified, links to the current, first, last, next and previous page are added to the response.
 
+### What does it return?
+#### V1
+Version 1.0.0 of this package will return the following type or result:
+```
+{
+    items: T[];
+    total: number;
+    pages: number;
+    page: number;
+    size: number;
+    self?: string;
+    first?: string;
+    last?: string;
+    next?: string;
+    prev?: string;
+}
+```
+
+#### V2
+Version 2.0.0 follows the HAL guidelines closer and will return the following type or result:
+```
+{
+  _embedded: {
+    items: T[];
+    total: number;
+    pages: number;
+    page: number;
+    size: number;
+  };
+  _links: {
+    self?: string;
+    first?: string;
+    last?: string;
+    next?: string;
+    prev?: string;
+  };
+}
+```
+
 ### What's in the package?
 This package exposes the following functions:
 - `calculateTotalPages`: Calculate the total amount of pages based on the total amount of elements and the page size
