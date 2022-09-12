@@ -87,6 +87,8 @@ This project can be published to the npm registry. To do so follow these steps:
 3. Once your changes have been commited to the main-branch, you can publish to the repo.
 4. Run `npm publish`.
 
+**Due to historic reasons v2.0.0 has been unpublished, meaning this version cannot be used for a new release. Make sure to bump to at least v2.0.1 to continue development.**
+
 ## Team
 
 This project has been created by:
